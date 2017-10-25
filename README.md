@@ -3,19 +3,19 @@
 
 ## Publication
 
-The code and analysis pipeline was developed by **Deena M.A. Gendoo** for the following publication: 
+This code and analysis pipeline was designed and developed by **Deena M.A. Gendoo** for the following publication: 
 
-**_Comprehensive Assessment of the Genetic Landscape of Matched Primary, Xenograft, and Organoid Models for Pancreatic Primary Cancer and Liver Metastasis_**
+**_Whole Genomes Define Concordance of Matched Primary, Xenograft, and Organoid Models of Pancreas Cancer_**
 
-**Contributing Authors:**
-Deena M.A. Gendoo, Robert E. Denroche, Amy Zhang, Mathieu Lemire, Mathieu Lemire, Nikolina Radulovich, Dianne Chadwick, Ilinca M. Lungu, Lincoln D. Stein, Julie M. Wilson,John M.S. Bartlett, Ming-Sound Tsao, Neesha Dhani, David Hedley, Steven Gallinger, Benjamin Haibe-Kains
+**Authors:**
+Deena M.A. Gendoo, Robert E. Denroche, Amy Zhang, Gun Ho Jang, Mathieu Lemire, Sandra Fischer, Nikolina Radulovich, Dianne Chadwick, Ilinca M. Lungu, Lincoln D. Stein, Julie M. Wilson, John M.S. Bartlett, Ming-Sound Tsao, Neesha Dhani, David Hedley, Steven Gallinger, Benjamin Haibe-Kains
 
 **Please cite:** 
-Gendoo et al, 2017 (to be updated)
+Gendoo et al, 2017 (Submitted, to be updated)
 
 ## Introduction to the Analysis
 
-This repository hosts code to analyze whole-genome sequencing (WGS) data for: 
+This repository hosts code to analyze whole-genome sequencing (WGS) data for the following data types: 
 
 - SSM : simple somatic mutation 
 - SV : structural variation 
@@ -23,21 +23,22 @@ This repository hosts code to analyze whole-genome sequencing (WGS) data for:
 
 The analysis is conducted on **Pancreatic Ductal Adenocarcinoma (PDAC)**, across three cohorts:
 
-1. Primary tumours and matching Xenografts (Prim-PDX pairs) (n=10 pairs)
-2. Liver metastasis and matching Xenografts (metastasis-PDX pairs) (n=6 pairs)
-3. Trios: resected primary with matched Xenograft (PDX) and matching organoid (PDO) (prim-PDX-PDO trios) (n=5 trios)
+1. Primary resected tumours and matching Xenografts (Primary-PDX pairs) (n=10 pairs)
+2. Liver metastasis and matching Xenografts (Metastasis-PDX pairs) (n=6 pairs)
+3. Trios: resected primary with matched Xenograft (PDX) and matching organoid (PDO) (Primary-PDX-PDO trios) (n=5 trios)
+
 NB: The trios are a subset of the 10 primary-PDX pairs. 
 
-## Reproducibility of the Analysis 
+## The Analysis 
 
-We will describe how to fully reproduce the figures and tables reported in the main manuscript. We automated the analysis pipeline so that minimal manual interaction is required to reproduce our results. To do this, one must simply:
+We describe how to reproduce the statistical analysis as reported in the manuscript. To do this, please proceed to:
 
 1. Set up the software environment
 2. Run the R scripts
 
 ### Set up the software environment
 
-We developed and tested our analysis pipeline using R running on Mac OSX platforms.
+We developed and tested our analysis pipeline using R running on Mac OS X platforms.
 
 To mimic our software environment the following R packages should be installed. All these packages are available on CRAN or Bioconductor.
 
@@ -79,14 +80,15 @@ loaded via a namespace (and not attached):
 [53] caTools_1.17.1          memoise_1.0.0           knitr_1.15.1                         
 
 ```
+### Running the R Scripts
 
 Once the packages are installed, please download this github repository. 
 
 This repository contains three folders: 
 
-1. **SSM** : scripts to replicate Figure 3
-2. **SV**  : scripts to replicate Figure 4 and Figure 5
-3. **CNV** : scripts to replicate Figure 6
+1. **SSM** : code for analysis for simple somatic mutation (SSM) data.
+2. **SV**: code for analysis of structural variation (SV) data.
+3. **CNV**: code for analysis of copy number variation (CNV) data. 
 
 Each folder is sub-divided into the following folders:
 
@@ -95,5 +97,22 @@ Each folder is sub-divided into the following folders:
 **MetastasisPairs**: for analysis conducted on 6 metastasis-PDX pairs
 
 **Trios**: for analysis conducted on 5 primary-PDX-PDO trios (unless otherwise indicated)
+
+
+
+### A Note on the Data
+
+**SV**
+
+Data are in TSV format (tsv). 
+Please consult files that end with (.annotatedSV.tsv). 
+
+**CNV**
+
+CELLULOID parameters are provided in the txt files starting with (parameters) and can be analyzed with this code. 
+
+Actual copy number segments are provided in the files (segments*.txt)
+
+The code analyzes files BED files (.bed) that show the overlapping genomic segments between tumours and matched disease models.These files end with (_CN_Final.bed)
 
 ### 
