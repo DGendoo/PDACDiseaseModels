@@ -99,20 +99,23 @@ Each folder is sub-divided into the following folders:
 **Trios**: for analysis conducted on 5 primary-PDX-PDO trios (unless otherwise indicated)
 
 
-
 ### A Note on the Data
 
-**SV**
+1. **SSM**
 
-Data are in TSV format (tsv). 
+Please consult files that end with (.final.vcf) or with (snp.maf.txt.tsv). 
+
+2. **SV**
+
 Please consult files that end with (.annotatedSV.tsv). 
 
-**CNV**
+3. **CNV**
 
-CELLULOID parameters are provided in the txt files starting with (parameters) and can be analyzed with this code. 
+CELLULOID parameters are provided in the txt files starting with (parameters). 
 
 Actual copy number segments are provided in the files (segments*.txt)
 
 The code analyzes files BED files (.bed) that show the overlapping genomic segments between tumours and matched disease models.These files end with (_CN_Final.bed)
+
 
 ### 
