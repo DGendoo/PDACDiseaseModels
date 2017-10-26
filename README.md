@@ -13,6 +13,9 @@ Deena M.A. Gendoo, Robert E. Denroche, Amy Zhang, Gun Ho Jang, Mathieu Lemire, S
 **Please cite:** 
 Gendoo et al, 2017 (Submitted, to be updated)
 
+**Questions or Comments:** 
+Please email deena.gendoo1984@gmail.com or deena.gendoo@utoronto.ca
+
 ## Introduction to the Analysis
 
 This repository hosts code to analyze whole-genome sequencing (WGS) data for the following data types: 
@@ -99,23 +102,180 @@ Each folder is sub-divided into the following folders:
 **Trios**: for analysis conducted on 5 primary-PDX-PDO trios (unless otherwise indicated)
 
 
-### A Note on the Data
+To run the analysis, in each subfolder, please first run the R Script that starts with 'STEP1'. 
+Once you run this script, all other scripts in that folder can be run individually, in no particular order. 
 
-1. **SSM**
+For subfolders that don't have a 'STEP1', this also means that any of the scripts can be run stand-alone in that folder. 
 
-Please consult files that end with (.final.vcf) or with (snp.maf.txt.tsv). 
+## List of Datasets Used in the Analysis
 
-2. **SV**
+Please consult the attached Supplementary data file in the manuscript, which contains whole-genome sequencing (WGS) data for the following data types: 
 
-Please consult files that end with (.annotatedSV.tsv). 
+- SSM : simple somatic mutation 
+- SV : structural variation 
+- CNV : copy number variation 
 
-3. **CNV**
+### Files needed to run the analysis
 
-CELLULOID parameters are provided in the txt files starting with (parameters). 
+The format of the Supplementary Data file follows the same format as the code repository. 
+This Data files are split three folders. Below is description of these folders and the types of files contained within them. 
+
+1. **SSM** : Please consult files that end with (.final.vcf) or with (snp.maf.txt.tsv). 
+2. **SV**: Please consult files that end with (.annotatedSV.tsv). 
+3. **CNV**: CELLULOID parameters are provided in the txt files starting with (parameters). 
 
 Actual copy number segments are provided in the files (segments*.txt)
 
 The code analyzes files BED files (.bed) that show the overlapping genomic segments between tumours and matched disease models.These files end with (_CN_Final.bed)
 
+
+
+Each folder is sub-divided into the following folders:
+
+**PrimaryPairs**: for analysis conducted on 10 primary-PDX pairs
+
+**MetastasisPairs**: for analysis conducted on 6 metastasis-PDX pairs
+
+**Trios**: for analysis conducted on 5 primary-PDX-PDO trios (unless otherwise indicated)
+
+
+
+Below is a listing of the files found in each folder and subfolder, for every data type:
+
+##### SSM - Primary Pairs
+
+```
+PCSI_0169_Pa_P.snp.maf.txt.tsv	PCSI_0590_Pa_X.snp.maf.txt.tsv	PCSI_0624_Pa_P.snp.maf.txt.tsv
+PCSI_0169_Pa_P_526.final.vcf	PCSI_0590_Pa_X_526.final.vcf	PCSI_0624_Pa_P_526.final.vcf
+PCSI_0169_Pa_X.snp.maf.txt.tsv	PCSI_0592_Pa_P.snp.maf.txt.tsv	PCSI_0624_Pa_X.snp.maf.txt.tsv
+PCSI_0169_Pa_X_526.final.vcf	PCSI_0592_Pa_P_526.final.vcf	PCSI_0624_Pa_X_526.final.vcf
+PCSI_0355_Pa_P.snp.maf.txt.tsv	PCSI_0592_Pa_X.snp.maf.txt.tsv	PCSI_0633_Pa_P.snp.maf.txt.tsv
+PCSI_0355_Pa_P_526.final.vcf	PCSI_0592_Pa_X_526.final.vcf	PCSI_0633_Pa_P_526.final.vcf
+PCSI_0355_Pa_X.snp.maf.txt.tsv	PCSI_0602_Pa_P.snp.maf.txt.tsv	PCSI_0633_Pa_X.snp.maf.txt.tsv
+PCSI_0355_Pa_X_526.final.vcf	PCSI_0602_Pa_P_526.final.vcf	PCSI_0633_Pa_X_526.final.vcf
+PCSI_0589_Pa_P.snp.maf.txt.tsv	PCSI_0602_Pa_X.snp.maf.txt.tsv	PCSI_0642_Pa_P.snp.maf.txt.tsv
+PCSI_0589_Pa_P_526.final.vcf	PCSI_0602_Pa_X_526.final.vcf	PCSI_0642_Pa_P_526.final.vcf
+PCSI_0589_Pa_X.snp.maf.txt.tsv	PCSI_0611_Pa_P.snp.maf.txt.tsv	PCSI_0642_Pa_X.snp.maf.txt.tsv
+PCSI_0589_Pa_X_526.final.vcf	PCSI_0611_Pa_P_526.final.vcf	PCSI_0642_Pa_X_526.final.vcf
+PCSI_0590_Pa_P.snp.maf.txt.tsv	PCSI_0611_Pa_X.snp.maf.txt.tsv
+PCSI_0590_Pa_P_526.final.vcf	PCSI_0611_Pa_X_526.final.vcf
+
+```
+
+##### SSM - Metastasis Pairs
+
+```
+PCSI_0489_Lv_M.snp.maf.txt.tsv	PCSI_0585_Lv_M.snp.maf.txt.tsv	PCSI_0605_Lv_M.snp.maf.txt.tsv
+PCSI_0489_Lv_M_526.final.vcf	PCSI_0585_Lv_M_526.final.vcf	PCSI_0605_Lv_M_526.final.vcf
+PCSI_0489_Lv_X.snp.maf.txt.tsv	PCSI_0585_Lv_X.snp.maf.txt.tsv	PCSI_0605_Lv_X.snp.maf.txt.tsv
+PCSI_0489_Lv_X_526.final.vcf	PCSI_0585_Lv_X_526.final.vcf	PCSI_0605_Lv_X_526.final.vcf
+PCSI_0491_Lv_M.snp.maf.txt.tsv	PCSI_0604_Lv_M.snp.maf.txt.tsv	PCSI_0606_Lv_M.snp.maf.txt.tsv
+PCSI_0491_Lv_M_526.final.vcf	PCSI_0604_Lv_M_526.final.vcf	PCSI_0606_Lv_M_526.final.vcf
+PCSI_0491_Lv_X.snp.maf.txt.tsv	PCSI_0604_Lv_X.snp.maf.txt.tsv	PCSI_0606_Lv_X.snp.maf.txt.tsv
+PCSI_0491_Lv_X_526.final.vcf	PCSI_0604_Lv_X_526.final.vcf	PCSI_0606_Lv_X_526.final.vcf
+
+```
+
+##### SSM - Trios
+
+```
+PCSI_0590_Pa_O.snp.maf.txt.tsv	PCSI_0592_Pa_X.snp.maf.txt.tsv	PCSI_0624_Pa_P.snp.maf.txt.tsv
+PCSI_0590_Pa_O_526.final.vcf	PCSI_0592_Pa_X_526.final.vcf	PCSI_0624_Pa_P_526.final.vcf
+PCSI_0590_Pa_P.snp.maf.txt.tsv	PCSI_0602_Pa_O.snp.maf.txt.tsv	PCSI_0624_Pa_X.snp.maf.txt.tsv
+PCSI_0590_Pa_P_526.final.vcf	PCSI_0602_Pa_O_526.final.vcf	PCSI_0624_Pa_X_526.final.vcf
+PCSI_0590_Pa_X.snp.maf.txt.tsv	PCSI_0602_Pa_P.snp.maf.txt.tsv	PCSI_0642_Pa_O.snp.maf.txt.tsv
+PCSI_0590_Pa_X_526.final.vcf	PCSI_0602_Pa_P_526.final.vcf	PCSI_0642_Pa_O_526.final.vcf
+PCSI_0592_Pa_O.snp.maf.txt.tsv	PCSI_0602_Pa_X.snp.maf.txt.tsv	PCSI_0642_Pa_P.snp.maf.txt.tsv
+PCSI_0592_Pa_O_526.final.vcf	PCSI_0602_Pa_X_526.final.vcf	PCSI_0642_Pa_P_526.final.vcf
+PCSI_0592_Pa_P.snp.maf.txt.tsv	PCSI_0624_Pa_O.snp.maf.txt.tsv	PCSI_0642_Pa_X.snp.maf.txt.tsv
+PCSI_0592_Pa_P_526.final.vcf	PCSI_0624_Pa_O_526.final.vcf	PCSI_0642_Pa_X_526.final.vcf
+
+```
+
+##### SV - Primary Pairs
+
+```
+PCSI_0169_Pa_P_526.annotatedSV.tsv	PCSI_0590_Pa_X_526.annotatedSV.tsv	PCSI_0624_Pa_P_526.annotatedSV.tsv
+PCSI_0169_Pa_X_526.annotatedSV.tsv	PCSI_0592_Pa_P_526.annotatedSV.tsv	PCSI_0624_Pa_X_526.annotatedSV.tsv
+PCSI_0355_Pa_P_526.annotatedSV.tsv	PCSI_0592_Pa_X_526.annotatedSV.tsv	PCSI_0633_Pa_P_526.annotatedSV.tsv
+PCSI_0355_Pa_X_526.annotatedSV.tsv	PCSI_0602_Pa_P_526.annotatedSV.tsv	PCSI_0633_Pa_X_526.annotatedSV.tsv
+PCSI_0589_Pa_P_526.annotatedSV.tsv	PCSI_0602_Pa_X_526.annotatedSV.tsv	PCSI_0642_Pa_P_526.annotatedSV.tsv
+PCSI_0589_Pa_X_526.annotatedSV.tsv	PCSI_0611_Pa_P_526.annotatedSV.tsv	PCSI_0642_Pa_X_526.annotatedSV.tsv
+PCSI_0590_Pa_P_526.annotatedSV.tsv	PCSI_0611_Pa_X_526.annotatedSV.tsv
+
+```
+
+##### SV - Metastasis Pairs
+
+```
+PCSI_0489_Lv_M_526.annotatedSV.tsv	PCSI_0585_Lv_M_526.annotatedSV.tsv	PCSI_0605_Lv_M_526.annotatedSV.tsv
+PCSI_0489_Lv_X_526.annotatedSV.tsv	PCSI_0585_Lv_X_526.annotatedSV.tsv	PCSI_0605_Lv_X_526.annotatedSV.tsv
+PCSI_0491_Lv_M_526.annotatedSV.tsv	PCSI_0604_Lv_M_526.annotatedSV.tsv	PCSI_0606_Lv_M_526.annotatedSV.tsv
+PCSI_0491_Lv_X_526.annotatedSV.tsv	PCSI_0604_Lv_X_526.annotatedSV.tsv	PCSI_0606_Lv_X_526.annotatedSV.tsv
+
+```
+
+##### SV - Trios
+
+```
+PCSI_0590_Pa_O_526.annotatedSV.tsv	PCSI_0592_Pa_X_526.annotatedSV.tsv	PCSI_0624_Pa_P_526.annotatedSV.tsv
+PCSI_0590_Pa_P_526.annotatedSV.tsv	PCSI_0602_Pa_O_526.annotatedSV.tsv	PCSI_0624_Pa_X_526.annotatedSV.tsv
+PCSI_0590_Pa_X_526.annotatedSV.tsv	PCSI_0602_Pa_P_526.annotatedSV.tsv	PCSI_0642_Pa_O_526.annotatedSV.tsv
+PCSI_0592_Pa_O_526.annotatedSV.tsv	PCSI_0602_Pa_X_526.annotatedSV.tsv	PCSI_0642_Pa_P_526.annotatedSV.tsv
+PCSI_0592_Pa_P_526.annotatedSV.tsv	PCSI_0624_Pa_O_526.annotatedSV.tsv	PCSI_0642_Pa_X_526.annotatedSV.tsv
+
+```
+
+##### CNV - Primary Pairs
+
+```
+parameters_PCSI_0169_Pa_P_526.txt	parameters_PCSI_0642_Pa_P_526.txt	segments_PCSI_0611_CN_Final.bed
+parameters_PCSI_0169_Pa_X_526.txt	parameters_PCSI_0642_Pa_X_526.txt	segments_PCSI_0611_Pa_P_526.txt
+parameters_PCSI_0355_Pa_P_526.txt	segments_PCSI_0169_CN_Final.bed		segments_PCSI_0611_Pa_X_526.txt
+parameters_PCSI_0355_Pa_X_526.txt	segments_PCSI_0169_Pa_P_526.txt		segments_PCSI_0624_CN_Final.bed
+parameters_PCSI_0589_Pa_P_526.txt	segments_PCSI_0169_Pa_X_526.txt		segments_PCSI_0624_Pa_P_526.txt
+parameters_PCSI_0589_Pa_X_526.txt	segments_PCSI_0355_CN_Final.bed		segments_PCSI_0624_Pa_X_526.txt
+parameters_PCSI_0590_Pa_P_526.txt	segments_PCSI_0355_Pa_P_526.txt		segments_PCSI_0633_CN_Final.bed
+parameters_PCSI_0590_Pa_X_526.txt	segments_PCSI_0355_Pa_X_526.txt		segments_PCSI_0633_Pa_P_526.txt
+parameters_PCSI_0611_Pa_P_526.txt	segments_PCSI_0589_CN_Final.bed		segments_PCSI_0633_Pa_X_526.txt
+parameters_PCSI_0611_Pa_X_526.txt	segments_PCSI_0589_Pa_P_526.txt		segments_PCSI_0642_CN_Final.bed
+parameters_PCSI_0624_Pa_P_526.txt	segments_PCSI_0589_Pa_X_526.txt		segments_PCSI_0642_Pa_P_526.txt
+parameters_PCSI_0624_Pa_X_526.txt	segments_PCSI_0590_CN_Final.bed		segments_PCSI_0642_Pa_X_526.txt
+parameters_PCSI_0633_Pa_P_526.txt	segments_PCSI_0590_Pa_P_526.txt
+parameters_PCSI_0633_Pa_X_526.txt	segments_PCSI_0590_Pa_X_526.txt
+
+```
+
+##### CNV - Metastasis Pairs
+
+```
+parameters_PCSI_0489_Lv_M_526.txt	parameters_PCSI_0606_Lv_M_526.txt	segments_PCSI_0585_Lv_X_526.txt
+parameters_PCSI_0489_Lv_X_526.txt	parameters_PCSI_0606_Lv_X_526.txt	segments_PCSI_0604_CN_Final.bed
+parameters_PCSI_0491_Lv_M_526.txt	segments_PCSI_0489_CN_Final.bed		segments_PCSI_0604_Lv_M_526.txt
+parameters_PCSI_0491_Lv_X_526.txt	segments_PCSI_0489_Lv_M_526.txt		segments_PCSI_0604_Lv_X_526.txt
+parameters_PCSI_0585_Lv_M_526.txt	segments_PCSI_0489_Lv_X_526.txt		segments_PCSI_0605_CN_Final.bed
+parameters_PCSI_0585_Lv_X_526.txt	segments_PCSI_0491_CN_Final.bed		segments_PCSI_0605_Lv_M_526.txt
+parameters_PCSI_0604_Lv_M_526.txt	segments_PCSI_0491_Lv_M_526.txt		segments_PCSI_0605_Lv_X_526.txt
+parameters_PCSI_0604_Lv_X_526.txt	segments_PCSI_0491_Lv_X_526.txt		segments_PCSI_0606_CN_Final.bed
+parameters_PCSI_0605_Lv_M_526.txt	segments_PCSI_0585_CN_Final.bed		segments_PCSI_0606_Lv_M_526.txt
+parameters_PCSI_0605_Lv_X_526.txt	segments_PCSI_0585_Lv_M_526.txt		segments_PCSI_0606_Lv_X_526.txt
+
+
+```
+
+
+##### CNV - Trios
+
+```
+parameters_PCSI_0590_Pa_O_526.txt	parameters_PCSI_0642_Pa_X_526.txt	segments_PCSI_0624_Pa_X_526.txt
+parameters_PCSI_0590_Pa_P_526.txt	segments_PCSI_0590_Pa_O_526.txt		segments_PCSI_0624_PvsO_CN_Final.bed
+parameters_PCSI_0590_Pa_X_526.txt	segments_PCSI_0590_Pa_P_526.txt		segments_PCSI_0624_XvsO_CN_Final.bed
+parameters_PCSI_0624_Pa_O_526.txt	segments_PCSI_0590_Pa_X_526.txt		segments_PCSI_0642_Pa_O_526.txt
+parameters_PCSI_0624_Pa_P_526.txt	segments_PCSI_0590_PvsO_CN_Final.bed	segments_PCSI_0642_Pa_P_526.txt
+parameters_PCSI_0624_Pa_X_526.txt	segments_PCSI_0590_XvsO_CN_Final.bed	segments_PCSI_0642_Pa_X_526.txt
+parameters_PCSI_0642_Pa_O_526.txt	segments_PCSI_0624_Pa_O_526.txt		segments_PCSI_0642_PvsO_CN_Final.bed
+parameters_PCSI_0642_Pa_P_526.txt	segments_PCSI_0624_Pa_P_526.txt		segments_PCSI_0642_XvsO_CN_Final.bed
+
+```
 
 ### 
