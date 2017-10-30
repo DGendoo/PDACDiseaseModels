@@ -30,7 +30,7 @@ The analysis is conducted on **Pancreatic Ductal Adenocarcinoma (PDAC)**, across
 2. Liver metastasis and matching Xenografts (Metastasis-PDX pairs) (n=6 pairs)
 3. Trios: resected primary with matched Xenograft (PDX) and matching organoid (PDO) (Primary-PDX-PDO trios) (n=5 trios)
 
-NB: The trios are a subset of the 10 primary-PDX pairs. 
+NB: The trios are a subset of the 10 primary-PDX pairs.  
 
 ## The Analysis 
 
