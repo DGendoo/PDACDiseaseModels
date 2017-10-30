@@ -120,8 +120,8 @@ Please consult the attached Supplementary data file in the manuscript, which con
 The format of the Supplementary Data file follows the same format as the code repository. 
 This Data files are split three folders. Below is description of these folders and the types of files contained within them. 
 
-1. **SSM** : Please consult files that end with (.final.vcf) or with (snp.maf.txt.tsv). 
-2. **SV**: Please consult files that end with (.annotatedSV.tsv). 
+1. **SSM** : Please consult files *.final.vcf or *snp.maf.txt.tsv. 
+2. **SV**: Please consult files *.annotatedSV.tsv.
 3. **CNV**: CELLULOID parameters are provided in the txt files starting with (parameters). Actual copy number segments are provided in the files (segments*.txt). The code analyzes files BED files (.bed) that show the overlapping genomic segments between tumours and matched disease models.These files end with (_CN_Final.bed)
 
 
