@@ -9,6 +9,7 @@ This code and analysis pipeline was designed and developed by **Deena M.A. Gendo
 
 **Please cite:** 
 Gendoo DMA et al. Whole genomes define concordance of matched primary, xenograft, and organoid models of pancreas cancer. PLoS Comput Biol. 2019 Jan 10;15(1):e1006596. doi: 10.1371/journal.pcbi.1006596. PMID: 30629588; PMCID: PMC6328084.
+
 URL to manuscript: https://pubmed.ncbi.nlm.nih.gov/30629588/
 
 
