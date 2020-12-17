@@ -14,7 +14,7 @@ Deena M.A. Gendoo, Robert E. Denroche, Amy Zhang, Gun Ho Jang, Mathieu Lemire, S
 Gendoo et al, 2017 (Submitted, to be updated)
 
 **Questions or Comments:** 
-Please email deena.gendoo1984@gmail.com or deena.gendoo@utoronto.ca
+Please email deena.gendoo1984@gmail.com or d.gendoo@bham.ac.uk
 
 ## Introduction to the Analysis
 
